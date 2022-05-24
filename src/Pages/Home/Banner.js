@@ -14,7 +14,7 @@ const Banner = () => {
     >
       <div className="hero-content flex-col lg:flex-row">
         <div className="mb-2">
-          <h1 className="text-5xl font-bold text-primary px-2">
+          <h1 className="text-5xl font-bold text-neutral px-2">
             Big Choice for Your Production!
           </h1>
           <p className="p-6">
