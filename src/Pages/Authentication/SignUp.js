@@ -8,6 +8,7 @@ import {
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const location = useLocation();
@@ -48,7 +49,8 @@ const SignUp = () => {
   //  navigate("/home");
   //}
   if (user || user1) {
-    navigate("/home");
+    navigate(from, { replace: true });
+    toast.success("SignUp Success");
   }
 
   const onSubmit = async (data) => {

@@ -8,6 +8,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Loading from "../Shared/Loading";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const location = useLocation();
@@ -41,6 +42,7 @@ const Login = () => {
     if (user || user1) {
       //if (token) {
       navigate(from, { replace: true });
+      toast.success("Login Success");
     }
   }, [user, user1, from, navigate]);
 
