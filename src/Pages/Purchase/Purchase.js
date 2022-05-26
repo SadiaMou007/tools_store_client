@@ -14,7 +14,9 @@ const Purchase = () => {
   const { data: product, isLoading } = useQuery("product", () =>
     fetch(url, {
       method: "GET",
-      authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
     }).then((res) => res.json())
   );
   if (isLoading) {
@@ -46,17 +48,16 @@ const Purchase = () => {
       // console.log(order);
       fetch("https://floating-cliffs-31659.herokuapp.com/booking", {
         method: "POST",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-
         headers: {
           "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
+
         body: JSON.stringify(order),
       })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-
           toast.success("Booking added");
         });
     }

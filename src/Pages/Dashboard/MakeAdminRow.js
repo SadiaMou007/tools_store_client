@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const MakeAdminRow = ({ singleUser, index, refetch }) => {
   const makeAdmin = () => {
     const email = singleUser.email;
-    const url = `http://localhost:5000/user/admin/${email}`;
+    const url = `https://floating-cliffs-31659.herokuapp.com/user/admin/${email}`;
     fetch(url, {
       method: "PUT",
       headers: {

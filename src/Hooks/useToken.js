@@ -8,9 +8,9 @@ const useToken = (user) => {
     if (email) {
       fetch(`https://floating-cliffs-31659.herokuapp.com/user/${email}`, {
         method: "PUT",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         headers: {
           "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
         body: JSON.stringify(currentUser),
       })
@@ -27,4 +27,3 @@ const useToken = (user) => {
 };
 
 export default useToken;
-//https://floating-cliffs-31659.herokuapp.com

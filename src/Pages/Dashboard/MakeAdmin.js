@@ -4,7 +4,7 @@ import Loading from "../Shared/Loading";
 import MakeAdminRow from "./MakeAdminRow";
 
 const MakeAdmin = () => {
-  const url = "http://localhost:5000/user";
+  const url = "https://floating-cliffs-31659.herokuapp.com/user";
   const {
     data: user,
     isLoading,

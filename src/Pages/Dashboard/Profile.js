@@ -11,7 +11,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${email}`, {
+    fetch(`https://floating-cliffs-31659.herokuapp.com/user/${email}`, {
       method: "GET",
       authorization: `Bearer ${localStorage.getItem("accessToken")}`,
     })
@@ -37,12 +37,12 @@ const Profile = () => {
       phone: phone,
       profileLink: plink,
     };
-    const url = `http://localhost:5000/user/${email}`;
+    const url = `https://floating-cliffs-31659.herokuapp.com/user/${email}`;
     fetch(url, {
       method: "PUT",
-      authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
       body: JSON.stringify(userInfo),
     })

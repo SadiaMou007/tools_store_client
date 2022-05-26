@@ -13,7 +13,6 @@ import SignUp from "./Pages/Authentication/SignUp";
 import NotFoundPage from "./Pages/Shared/NotFoundPage";
 import Footer from "./Pages/Shared/Footer";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import Review from "./Pages/Dashboard/Review";
 import Profile from "./Pages/Dashboard/Profile";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import RequireAdmin from "./Pages/Authentication/RequireAdmin";
