@@ -12,6 +12,9 @@ import RequireAuth from "./Pages/Authentication/RequireAuth";
 import SignUp from "./Pages/Authentication/SignUp";
 import NotFoundPage from "./Pages/Shared/NotFoundPage";
 import Footer from "./Pages/Shared/Footer";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import Review from "./Pages/Dashboard/Review";
+import Profile from "./Pages/Dashboard/Profile";
 
 function App() {
   return (
@@ -23,7 +26,6 @@ function App() {
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
-
         <Route
           path="/tool/:id"
           element={
@@ -32,6 +34,16 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
+          <Route path="profile" element={<Profile />}></Route>
+        </Route>
         <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
       <Footer />

@@ -7,8 +7,8 @@ import auth from "../../firebase.init";
 const NavBar = () => {
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
+    localStorage.removeItem("accessToken");
     signOut(auth);
-    // localStorage.removeItem("accessToken");
   };
   const menuItems = (
     <>
@@ -21,6 +21,13 @@ const NavBar = () => {
         <NavLink to={"/blogs"} className="me-1 font-serif">
           BLOGS
         </NavLink>
+      </li>
+      <li>
+        {user && (
+          <NavLink to={"/dashboard"} className="me-1 font-serif">
+            DASHBOARD
+          </NavLink>
+        )}
       </li>
 
       <li className="mx-3">

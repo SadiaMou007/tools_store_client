@@ -9,6 +9,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import useToken from "../../Hooks/useToken";
 
 const SignUp = () => {
   const location = useLocation();
@@ -28,7 +29,7 @@ const SignUp = () => {
   const [updateProfile, updating, error2] = useUpdateProfile(auth);
 
   //update user in db//jwt token
-  // const [token] = useToken(user || user1);
+  const [token] = useToken(user || user1);
 
   const navigate = useNavigate();
 
@@ -45,10 +46,7 @@ const SignUp = () => {
     );
   }
 
-  // if (token) {
-  //  navigate("/home");
-  //}
-  if (user || user1) {
+  if (token) {
     navigate(from, { replace: true });
     toast.success("SignUp Success");
   }
