@@ -42,7 +42,7 @@ const NavBar = () => {
           </NavLink>
         )}
       </li>
-      <span className="my-auto"> {user?.email}</span>
+      <span className="my-auto"> {user?.displayName}</span>
     </>
   );
 

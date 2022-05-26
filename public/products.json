@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ANGLE_GRINDER",
+    "image": "https://i.ibb.co/4Phy0y9/angle-Grinder.jpg",
+    "description": "It is a handheld power tool used for grinding and polishing.",
+    "price": 10,
+    "quantity": 500,
+    "minQuantity": 5
+  },
+  {
+    "name": "AXE",
+    "image": "https://i.ibb.co/BNHcv15/axe.jpg",
+    "description": "Best quality exe for daily activity.",
+    "price": 10,
+    "quantity": 500,
+    "minQuantity": 5
+  },
+  {
+    "name": "GLUE_GUN",
+    "image": "https://i.ibb.co/9VJXZFs/glueGun.jpg",
+    "description": "Best quality glue gun. Used for attached woods",
+    "price": 12,
+    "quantity": 500,
+    "minQuantity": 5
+  },
+  {
+    "name": "HAMMER",
+    "image": "https://i.ibb.co/k2zfW8P/hammer.jpg",
+    "description": "Stronger and long lasting product with 2 years warranty",
+    "price": 15,
+    "quantity": 500,
+    "minQuantity": 5
+  },
+  {
+    "name": "HAND_SAW",
+    "image": "https://i.ibb.co/xhMKhdn/handSaw.jpg",
+    "description": "Best product for you, Full iron metal product",
+    "price": 14,
+    "quantity": 500,
+    "minQuantity": 5
+  },
+  {
+    "name": "SCREW_DRIVER",
+    "image": "https://i.ibb.co/6vM11fz/screq-Driver.jpg",
+    "description": "Provide 1 year warranty. Imported from abc country",
+    "price": 13,
+    "quantity": 500,
+    "minQuantity": 5
+  }
+]

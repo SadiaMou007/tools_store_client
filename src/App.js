@@ -12,6 +12,7 @@ import RequireAuth from "./Pages/Authentication/RequireAuth";
 import SignUp from "./Pages/Authentication/SignUp";
 import NotFoundPage from "./Pages/Shared/NotFoundPage";
 import Footer from "./Pages/Shared/Footer";
+import Tool from "./Pages/Home/Tool";
 
 function App() {
   return (
@@ -28,6 +29,14 @@ function App() {
           element={
             <RequireAuth>
               <Purchase />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/tool/:id"
+          element={
+            <RequireAuth>
+              <Tool />
             </RequireAuth>
           }
         ></Route>
