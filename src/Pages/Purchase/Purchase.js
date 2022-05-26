@@ -1,7 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const Purchase = () => {
-  return <div>Purchase</div>;
+  const { id } = useParams();
+
+  return <div>Purchase: {id}</div>;
 };
 
 export default Purchase;

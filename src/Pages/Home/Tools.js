@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Loading from "../Shared/Loading";
 import Tool from "./Tool";
 
 const Tools = () => {
@@ -10,6 +11,9 @@ const Tools = () => {
         setProducts(data);
       });
   }, [products]);
+  if (products?.length === 0) {
+    return <Loading />;
+  }
   return (
     <div className="my-6 mx-12 p-3">
       <h2 className="my-3 text-center text-3xl">
@@ -20,9 +24,11 @@ const Tools = () => {
           <Tool product={product} key={product._id}></Tool>
         ))}
       </div>
-      <div className="flex justify-end w-full">
+      <div className="flex justify-center mt-3 mb-6 w-full">
         {" "}
-        <button className="btn btn-outline border-info">SEE ALL</button>
+        <button className="btn btn-primary btn-outline font-bold w-1/4">
+          SEE ALL
+        </button>
       </div>
     </div>
   );

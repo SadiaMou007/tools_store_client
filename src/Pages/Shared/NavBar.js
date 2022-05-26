@@ -23,11 +23,6 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-      <li>
-        <NavLink to={"/purchase"} className="font-serif me-1">
-          PURCHASE
-        </NavLink>
-      </li>
       <li className="mx-3">
         {user ? (
           <button
