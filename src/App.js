@@ -15,6 +15,7 @@ import Footer from "./Pages/Shared/Footer";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Review from "./Pages/Dashboard/Review";
 import Profile from "./Pages/Dashboard/Profile";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           }
         >
           <Route path="profile" element={<Profile />}></Route>
+          <Route path="makeAdmin" element={<MakeAdmin />}></Route>
         </Route>
         <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>

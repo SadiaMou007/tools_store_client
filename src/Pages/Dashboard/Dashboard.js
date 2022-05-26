@@ -27,6 +27,9 @@ const Dashboard = () => {
           <li>
             <Link to={"/dashboard/profile"}>MY PROFILE</Link>
           </li>
+          <li>
+            <Link to={"/dashboard/makeAdmin"}>MAKE ADMIN</Link>
+          </li>
         </ul>
       </div>
     </div>
