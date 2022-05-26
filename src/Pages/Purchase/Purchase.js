@@ -10,7 +10,7 @@ const Purchase = () => {
   const [err, setErr] = useState("");
   const [user] = useAuthState(auth);
   const { id } = useParams();
-  const url = `http://localhost:5000/products/${id}`;
+  const url = `https://floating-cliffs-31659.herokuapp.com/products/${id}`;
   const { data: product, isLoading } = useQuery("product", () =>
     fetch(url, {
       method: "GET",
@@ -43,7 +43,7 @@ const Purchase = () => {
         total: total,
       };
       // console.log(order);
-      fetch("http://localhost:5000/booking", {
+      fetch("https://floating-cliffs-31659.herokuapp.com/booking", {
         method: "POST",
         headers: {
           "content-type": "application/json",
