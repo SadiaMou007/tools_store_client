@@ -28,7 +28,7 @@ const Dashboard = () => {
           {/* <!-- Sidebar content here -->*/}
 
           <li>
-            <Link to={"/dashboard/profile"}>MY PROFILE</Link>
+            <Link to={"/dashboard"}>MY PROFILE</Link>
           </li>
           <li>{!admin && <Link to={"/dashboard/myOrder"}>MY ORDER</Link>}</li>
           <li>

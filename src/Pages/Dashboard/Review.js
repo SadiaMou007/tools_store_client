@@ -34,28 +34,27 @@ const Review = () => {
   };
 
   return (
-    <div className="mx-12">
+    <div className="w-1/2 mx-auto">
       <h2 className="text-xl my-3">Add Review</h2>
       <form onSubmit={handleSubmit}>
         <textarea
           name="review"
-          cols="60"
           rows="4"
           placeholder="review"
-          className="border-2 px-2 rounded"
+          className="border-2 px-2 rounded w-full"
         ></textarea>
         <input
           type="number"
           name="rating"
           placeholder="rating"
-          className="border-2 w-1/2 p-2 rounded"
+          className="border-2 w-full p-2 rounded"
         />
         <div>
           {" "}
           <input
             type="submit"
             value="SUBMIT"
-            className="btn btn-primary btn-outline w-1/2 my-3"
+            className="btn btn-primary btn-outline full my-3"
           />
         </div>
       </form>

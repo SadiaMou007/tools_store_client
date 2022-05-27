@@ -31,6 +31,17 @@ const Blogs = () => {
           Q2: What are the different ways to manage a state in a React
           application?
         </h2>
+
+        <p className="text-xl m-2">
+          React state contain information for react component. Most common way
+          to manage data is using react hooks. Such as, React use effect hook
+          contain certain change of state, useEffect hook manage the side
+          effect. <br />
+          React context can manage react application state which also reduce
+          props drilling. <br />
+          Redux library also can manage props drilling and handle states
+          behaviour.
+        </p>
       </div>
       <div className="my-4 bg-secondary p-3">
         <h2 className="text-2xl mt-3 mb-2">

@@ -12,7 +12,7 @@ const Profile = () => {
 
   useEffect(() => {
     fetch(`https://floating-cliffs-31659.herokuapp.com/user/${email}`, {
-      method: "PUT",
+      method: "GET",
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -51,9 +51,21 @@ const Profile = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        navigate("/dashboard");
         toast("update success");
+        if (data.result.modifiedCount === 1) {
+          fetch(`https://floating-cliffs-31659.herokuapp.com/user/${email}`, {
+            method: "GET",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              // console.log(data);
+              setUser1(data);
+            });
+        }
       });
   };
   return (
