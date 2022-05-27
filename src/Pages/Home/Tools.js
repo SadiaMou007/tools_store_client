@@ -5,10 +5,7 @@ import Tool from "./Tool";
 const Tools = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://floating-cliffs-31659.herokuapp.com/products", {
-      method: "GET",
-      authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-    })
+    fetch("https://floating-cliffs-31659.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

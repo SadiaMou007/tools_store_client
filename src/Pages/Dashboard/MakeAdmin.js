@@ -12,7 +12,10 @@ const MakeAdmin = () => {
   } = useQuery("user", () =>
     fetch(url, {
       method: "GET",
-      authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      headers:{
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+
+      }
     }).then((res) => res.json())
   );
   if (isLoading) {
