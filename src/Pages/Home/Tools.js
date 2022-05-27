@@ -4,23 +4,28 @@ import Tool from "./Tool";
 
 const Tools = () => {
   const [products, setProducts] = useState([]);
+  const [reverse, setReverse] = useState([]);
   useEffect(() => {
     fetch("https://floating-cliffs-31659.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
+        const p = products.reverse();
+        const q = p.slice(0, 6);
+        setReverse(q);
       });
   }, [products]);
   if (products?.length === 0) {
     return <Loading />;
   }
+
   return (
     <div className="my-6 mx-12 p-3">
       <h2 className="my-3 text-center text-3xl">
         AVAILABLE TOOLS: {products.length}
       </h2>
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4">
-        {products.map((product) => (
+        {reverse.map((product) => (
           <Tool product={product} key={product._id}></Tool>
         ))}
       </div>
