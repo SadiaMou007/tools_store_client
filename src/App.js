@@ -18,6 +18,8 @@ import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import RequireAdmin from "./Pages/Authentication/RequireAdmin";
 import MyOrder from "./Pages/Dashboard/MyOrder";
 import Review from "./Pages/Dashboard/Review";
+import Payment from "./Pages/Dashboard/Payment";
+import AddProduct from "./Pages/Dashboard/AddProduct";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="dashboard/payment/:id" element={<Payment />}></Route>
+
         <Route
           path="/tool/:id"
           element={
@@ -53,6 +57,14 @@ function App() {
             element={
               <RequireAdmin>
                 <MakeAdmin />
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="addProduct"
+            element={
+              <RequireAdmin>
+                <AddProduct />
               </RequireAdmin>
             }
           ></Route>
