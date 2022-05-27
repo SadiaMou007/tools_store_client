@@ -12,8 +12,11 @@ const Profile = () => {
 
   useEffect(() => {
     fetch(`https://floating-cliffs-31659.herokuapp.com/user/${email}`, {
-      method: "GET",
-      authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
     })
       .then((res) => res.json())
       .then((data) => {
