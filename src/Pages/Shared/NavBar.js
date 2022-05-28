@@ -23,6 +23,14 @@ const NavBar = () => {
         </NavLink>
       </li>
       <li>
+        <NavLink to={"/portfolio"} className="me-1 font-serif">
+          PORTFOLIO
+        </NavLink>
+      </li>
+
+
+
+      <li>
         {user && (
           <NavLink to={"/dashboard"} className="me-1 font-serif">
             DASHBOARD
