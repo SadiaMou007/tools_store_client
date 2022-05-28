@@ -11,7 +11,7 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
   const { id } = useParams();
-  const url = `http://localhost:5000/booking/${id}`;
+  const url = `https://floating-cliffs-31659.herokuapp.com/booking/${id}`;
 
   const { data: booked, isLoading } = useQuery("booked", () =>
     fetch(url, {

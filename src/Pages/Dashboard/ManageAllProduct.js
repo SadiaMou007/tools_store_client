@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const ManageAllProduct = () => {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/bookings", {
+    fetch("https://floating-cliffs-31659.herokuapp.com/bookings", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

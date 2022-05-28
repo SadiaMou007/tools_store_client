@@ -19,7 +19,7 @@ const MyOrder = () => {
   const handleDelete = (order) => {
     const { _id } = order;
     const id = _id;
-    const url = `http://localhost:5000/booking/${id}`;
+    const url = `https://floating-cliffs-31659.herokuapp.com/booking/${id}`;
     fetch(url, {
       method: "DELETE",
       headers: {

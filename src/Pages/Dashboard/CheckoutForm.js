@@ -13,7 +13,7 @@ const CheckoutForm = ({ booked }) => {
 
   const { _id, total, userEmail, productName } = booked;
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://floating-cliffs-31659.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -72,7 +72,7 @@ const CheckoutForm = ({ booked }) => {
         transactionId: paymentIntent.id,
       };
 
-      fetch(`http://localhost:5000/booking/${_id}`, {
+      fetch(`https://floating-cliffs-31659.herokuapp.com/booking/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

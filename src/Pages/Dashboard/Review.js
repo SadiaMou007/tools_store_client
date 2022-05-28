@@ -15,7 +15,7 @@ const Review = () => {
       rating,
       email,
     };
-    fetch("http://localhost:5000/review", {
+    fetch("https://floating-cliffs-31659.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

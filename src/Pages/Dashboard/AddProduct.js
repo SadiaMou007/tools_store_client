@@ -35,7 +35,7 @@ const AddProduct = () => {
           console.log(product);
 
           //send to database
-          fetch("http://localhost:5000/product", {
+          fetch("https://floating-cliffs-31659.herokuapp.com/product", {
             method: "POST",
             headers: {
               "content-type": "application/json",
