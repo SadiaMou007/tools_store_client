@@ -1,5 +1,5 @@
 import React from "react";
-import { QuestionMarkCircleIcon, ArrowRightIcon } from "@heroicons/react/solid";
+import { QuestionMarkCircleIcon } from "@heroicons/react/solid";
 
 const Blogs = () => {
   return (
