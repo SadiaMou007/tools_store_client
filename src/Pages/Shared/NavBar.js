@@ -1,14 +1,16 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
     localStorage.removeItem("accessToken");
     signOut(auth);
+    navigate("/");
   };
   const menuItems = (
     <>
@@ -27,8 +29,6 @@ const NavBar = () => {
           PORTFOLIO
         </NavLink>
       </li>
-
-
 
       <li>
         {user && (
